@@ -13,19 +13,17 @@ xdmp:set-response-content-type("text/html"),
           for $x in fn:doc()
 		order by fn:substring(fn:base-uri($x),38) ascending
 		return 	
-		<p><b class="orders" />{$x/substring(fn:base-uri($x),38)}</p>
+		<b><p>{$x/substring(fn:base-uri($x),38)}</p></b>
    )
-   else if(xdmp:get-request-field("order") = "descending") then
+   else if(xdmp:get-request-field("order") = "Descending") then
    ( 
       for $x in fn:doc()
 		order by fn:substring(fn:base-uri($x),38) descending
 		return 	
-		<p><b class="orders" />{$x/substring(fn:base-uri($x),38)}</p>
+		<b><p>{$x/substring(fn:base-uri($x),38)}</p></b>
    ) 
-   else(
-     for $x in fn:doc()
-	 return 	
-	<p><b class="orders" />{$x/substring(fn:base-uri($x),38)}</p>
+   else(	
+	<b><p>No Order Is Selected</p></b>
 	)
   }
 
