@@ -1,0 +1,5 @@
+<forest-create xmlns="https://marklogic.com/manage">
+  <forest-name>shakespeare-content-1</forest-name>
+  <database>shakespeare-content</database>
+  <host>360ndclp083.360logica.com</host>
+</forest-create>

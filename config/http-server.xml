@@ -1,0 +1,7 @@
+<http-server-properties xmlns="http://marklogic.com/manage">
+  <server-name>MLHttpServer</server-name>
+  <server-type>http</server-type>
+  <root>E://MarkLogicAssignment//src</root>
+  <port>8010</port>
+  <content-database>shakespeare-content</content-database>
+</http-server-properties>

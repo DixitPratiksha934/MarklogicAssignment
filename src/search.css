@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	font-family: "Myriad Pro",sans-serif;
+}
+
+h1 {
+	color: #555555;
+}
+
+input {
+	font-family: "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+}
+
+.article-heading {
+	
+	font-size: 1.1em;
+}
+
+.result-item {
+	padding-top: 5px;
+}
+
+.highlight {
+	background-color: #D2F196;
+}
+
+.dark-gray {
+	color: #333333;
+}
