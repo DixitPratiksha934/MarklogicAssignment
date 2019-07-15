@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="2" name="Failed suite [Complete Suite]">
+  <listeners>
+    <listener class-name="net.marklogic.report.TestCaseTrackingListners"/>
+  </listeners>
+  <test thread-count="5" verbose="2" name="chrome QueryConsoleTest(failed)">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="http://admin:admin@localhost:8000/qconsole/"/>
+    <classes>
+      <class name="net.marklogic.testScripts.QueryConsoleTest">
+        <methods>
+          <include name="getTestData"/>
+          <include name="queryConsoleAutomationFlow"/>
+          <include name="before"/>
+          <include name="setUp"/>
+          <include name="afterMainMethod"/>
+          <include name="tearDownSuite"/>
+        </methods>
+      </class> <!-- net.marklogic.testScripts.QueryConsoleTest -->
+    </classes>
+  </test> <!-- chrome QueryConsoleTest(failed) -->
+</suite> <!-- Failed suite [Complete Suite] -->

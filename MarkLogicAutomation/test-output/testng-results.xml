@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[
+Initialize Browser - chrome ]]>
+    </line>
+    <line>
+      <![CDATA[
+Invoke target Environment - null ]]>
+    </line>
+    <line>
+      <![CDATA[
+1:Open Query Console and execute a query to create a database]]>
+    </line>
+    <line>
+      <![CDATA[
+2:Verify the output shown when the query is been executed.]]>
+    </line>
+    <line>
+      <![CDATA[
+3:Open Query Console and execute a query to create a forest]]>
+    </line>
+    <line>
+      <![CDATA[
+4:Verify the output shown when the query is been executed.]]>
+    </line>
+    <line>
+      <![CDATA[
+5:Insert some data in the database created, using a query in Query Console itself]]>
+    </line>
+    <line>
+      <![CDATA[
+6:Now move to admin page]]>
+    </line>
+    <line>
+      <![CDATA[
+7: open the database created]]>
+    </line>
+    <line>
+      <![CDATA[
+8: Move to status page]]>
+    </line>
+    <line>
+      <![CDATA[
+9:check the count of the documents which are inserted on the status page.]]>
+    </line>
+  </reporter-output>
+  <suite name="Complete Suite" duration-ms="44181" started-at="2019-07-15T16:30:47Z" finished-at="2019-07-15T16:31:31Z">
+    <groups>
+    </groups>
+    <test name="chrome QueryConsoleTest" duration-ms="44181" started-at="2019-07-15T16:30:47Z" finished-at="2019-07-15T16:31:31Z">
+      <class name="net.marklogic.testScripts.QueryConsoleTest">
+        <test-method status="PASS" signature="before()[pri:0, instance:net.marklogic.testScripts.QueryConsoleTest@1b083826]" name="before" is-config="true" duration-ms="1070" started-at="2019-07-15T16:30:46Z" finished-at="2019-07-15T16:30:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, java.lang.String, java.lang.String)[pri:0, instance:net.marklogic.testScripts.QueryConsoleTest@1b083826]" name="setUp" is-config="true" duration-ms="36426" started-at="2019-07-15T16:30:47Z" finished-at="2019-07-15T16:31:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void net.marklogic.testScripts.QueryConsoleTest.queryConsoleAutomationFlow()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[http://admin:admin@localhost:8000/qconsole/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[
+Initialize Browser - chrome ]]>
+            </line>
+            <line>
+              <![CDATA[
+Invoke target Environment - null ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="getTestData()[pri:0, instance:net.marklogic.testScripts.QueryConsoleTest@1b083826]" name="getTestData" is-config="true" duration-ms="1" started-at="2019-07-15T16:31:23Z" finished-at="2019-07-15T16:31:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTestData -->
+        <test-method status="PASS" signature="queryConsoleAutomationFlow()[pri:0, instance:net.marklogic.testScripts.QueryConsoleTest@1b083826]" name="queryConsoleAutomationFlow" duration-ms="2252" started-at="2019-07-15T16:31:23Z" description="Query Console Automation Flow" finished-at="2019-07-15T16:31:26Z">
+          <reporter-output>
+            <line>
+              <![CDATA[
+1:Open Query Console and execute a query to create a database]]>
+            </line>
+            <line>
+              <![CDATA[
+2:Verify the output shown when the query is been executed.]]>
+            </line>
+            <line>
+              <![CDATA[
+3:Open Query Console and execute a query to create a forest]]>
+            </line>
+            <line>
+              <![CDATA[
+4:Verify the output shown when the query is been executed.]]>
+            </line>
+            <line>
+              <![CDATA[
+5:Insert some data in the database created, using a query in Query Console itself]]>
+            </line>
+            <line>
+              <![CDATA[
+6:Now move to admin page]]>
+            </line>
+            <line>
+              <![CDATA[
+7: open the database created]]>
+            </line>
+            <line>
+              <![CDATA[
+8: Move to status page]]>
+            </line>
+            <line>
+              <![CDATA[
+9:check the count of the documents which are inserted on the status page.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- queryConsoleAutomationFlow -->
+        <test-method status="PASS" signature="afterMainMethod(org.testng.ITestResult)[pri:0, instance:net.marklogic.testScripts.QueryConsoleTest@1b083826]" name="afterMainMethod" is-config="true" duration-ms="5458" started-at="2019-07-15T16:31:26Z" finished-at="2019-07-15T16:31:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=queryConsoleAutomationFlow status=SUCCESS method=QueryConsoleTest.queryConsoleAutomationFlow()[pri:0, instance:net.marklogic.testScripts.QueryConsoleTest@1b083826] output=
+1:Open Query Console and execute a query to create a database]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMainMethod -->
+        <test-method status="PASS" signature="tearDownSuite()[pri:0, instance:net.marklogic.testScripts.QueryConsoleTest@1b083826]" name="tearDownSuite" is-config="true" duration-ms="702" started-at="2019-07-15T16:31:31Z" finished-at="2019-07-15T16:31:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownSuite -->
+      </class> <!-- net.marklogic.testScripts.QueryConsoleTest -->
+    </test> <!-- chrome QueryConsoleTest -->
+  </suite> <!-- Complete Suite -->
+</testng-results>

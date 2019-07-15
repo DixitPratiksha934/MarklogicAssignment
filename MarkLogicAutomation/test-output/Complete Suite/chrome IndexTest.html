@@ -1,0 +1,122 @@
+<html>
+<head>
+<title>TestNG:  chrome IndexTest</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>chrome IndexTest</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Jul 15 18:43:44 IST 2019</td>
+</tr>
+<tr><td>Total time:</td><td>30 seconds (30979 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='net.marklogic.testScripts.IndexTest.verifyIndexPage()'><b>verifyIndexPage</b><br>Test class: net.marklogic.testScripts.IndexTest<br>Test method: Sorting By Ascending and Descending Order and check results<br/>
+<a href="#Output-181252244" onClick='toggleBox("Output-181252244", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-181252244" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-181252244">
+
+1.Verify index page title<br/>
+
+2:Verify index page all elements showing properly<br/>
+
+3.Click on radio button ascending and verify button is selected or not<br/>
+
+4:Click on search<br/>
+
+5:Verify after selecting search user is redirecting to the result page<br/>
+
+6:Verify result Page is showing correct result as users choice is ascending<br/>
+
+7.1:Verify document name is showing in ascending order<br/>
+
+7.2:Verify index page all elements showing properly<br/>
+
+8.Click on radio button descending and verify button is selected or not<br/>
+
+9:Click on search<br/>
+
+10:Verify after selecting search user is redirecting to the result page<br/>
+
+11:Verify result Page is showing correct result as users choice is descending<br/>
+
+12.1:Verify document name is showing in descending order<br/>
+
+12.2:Verify index page all elements showing properly<br/>
+
+13:Verify If User not select any radio button and search it will show message<br/>
+
+13.1:Click on search<br/>
+</div>
+</td>
+<td></td>
+<td>19</td>
+<td>net.marklogic.testScripts.IndexTest@2890c451</td></tr>
+</table><p>
+</body>
+</html>

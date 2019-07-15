@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" verbose="2" name="Failed suite [Complete Suite - All Browsers Sequential Execution]" parallel="tests">
+  <listeners>
+    <listener class-name="com.vin.report.TestCaseTrackingListners"/>
+  </listeners>
+  <test thread-count="2" verbose="2" name="Firefox Test(failed)" parallel="tests">
+    <parameter name="browser" value="ie"/>
+    <classes>
+      <class name="com.vin.testscripts.ValidLoginToVin">
+        <methods>
+          <include name="tearDownSuite"/>
+          <include name="before"/>
+          <include name="setUp"/>
+          <include name="getTestData"/>
+          <include name="validLoginToVin"/>
+          <include name="afterMainMethod"/>
+        </methods>
+      </class> <!-- com.vin.testscripts.ValidLoginToVin -->
+    </classes>
+  </test> <!-- Firefox Test(failed) -->
+</suite> <!-- Failed suite [Complete Suite - All Browsers Sequential Execution] -->

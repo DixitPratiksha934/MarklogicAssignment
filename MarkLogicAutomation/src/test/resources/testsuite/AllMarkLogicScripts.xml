@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Complete Suite" verbose="2">
+
+	<listeners>
+		<listener class-name="net.marklogic.report.TestCaseTrackingListners" />
+	</listeners>
+
+	<test name="chrome IndexTest">
+		<parameter name="browser" value="chrome" />
+		<parameter name="url"
+			value="http://admin:admin@localhost:8010/index.xqy" />
+		<classes>
+			<class name="net.marklogic.testScripts.IndexTest" />
+		</classes>
+	</test>
+
+	<test name="chrome SearchTextTest">
+		<parameter name="browser" value="chrome" />
+		<parameter name="url"
+			value="http://admin:admin@localhost:8010/searchresult.xqy" />
+		<classes>
+			<class name="net.marklogic.testScripts.SearchTextTest" />
+		</classes>
+	</test>
+
+
+	<test name="chrome QueryConsoleTest">
+		<parameter name="browser" value="chrome" />
+		<parameter name="url"
+			value="http://admin:admin@localhost:8000/qconsole/" />
+		<classes>
+			<class name="net.marklogic.testScripts.QueryConsoleTest" />
+		</classes>
+	</test>
+</suite>
