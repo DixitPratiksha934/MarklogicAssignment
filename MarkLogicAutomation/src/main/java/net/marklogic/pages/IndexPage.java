@@ -1,6 +1,5 @@
 package net.marklogic.pages;
 
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,7 +9,6 @@ import org.testng.Assert;
 
 import net.marklogic.selenium.core.BasePage;
 import net.marklogic.utilities.ApplicationVerificationTitles;
-
 
 public class IndexPage extends BasePage {
 
@@ -35,29 +33,27 @@ public class IndexPage extends BasePage {
 	 */
 	public void verifyIndexPage() {
 		waitForPageLoaded();
-		Assert.assertTrue(ascendingRadioBTN.isDisplayed() && descendingRadioBTN.isDisplayed() && searchBTN.isDisplayed());
+		Assert.assertTrue(
+				ascendingRadioBTN.isDisplayed() && descendingRadioBTN.isDisplayed() && searchBTN.isDisplayed());
 	}
 
-	/*verify Page Title*/
-	
-	public void verifyPageTitle()
-	{
-		Assert.assertEquals(driver.getTitle(),ApplicationVerificationTitles.indexPageTitle);
+	/* verify Page Title */
+
+	public void verifyPageTitle() {
+		Assert.assertEquals(driver.getTitle(), ApplicationVerificationTitles.indexPageTitle);
 	}
-	
-	/*Choose the radio button(Ascending/Descending)*/
-	public void clickOnRadioButtonandVerifyIsSelected(String buttonTochoose)
-	{
-		WebElement button=driver.findElement(By.xpath("//*[@id='" + buttonTochoose + "']//following-sibling::input"));
+
+	/* Choose the radio button(Ascending/Descending) */
+	public void clickOnRadioButtonandVerifyIsSelected(String buttonTochoose) {
+		WebElement button = driver.findElement(By.xpath("//*[@id='" + buttonTochoose + "']//following-sibling::input"));
 		clickOn(button);
 		Assert.assertTrue(button.isSelected());
 	}
-	
-	/*Click on search button*/
-	public ResultPage clickOnSearchButton()
-	{
+
+	/* Click on search button */
+	public ResultPage clickOnSearchButton() {
 		clickOn(searchBTN);
-		 return PageFactory.initElements(driver,ResultPage.class);
+		return PageFactory.initElements(driver, ResultPage.class);
 	}
-				 
+
 }

@@ -9,19 +9,59 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Complete Suite</th></tr>
-<tr><td><a href="#t0">chrome QueryConsoleTest</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">44,181</td><td></td><td></td></tr>
+<tr><td><a href="#t0">chrome IndexTest</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">47,058</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">chrome SearchTextTest</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">39,970</td><td></td><td></td></tr>
+<tr><td><a href="#t2">chrome QueryConsoleTest</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">157,282</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t3">chrome AdminTest</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">45,552</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">4</th><th class="num">0</th><th class="num">0</th><th class="num">289,862</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Complete Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">chrome QueryConsoleTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">net.marklogic.testScripts.QueryConsoleTest</td><td><a href="#m0">queryConsoleAutomationFlow</a></td><td rowspan="1">1563208283892</td><td rowspan="1">2252</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Complete Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">chrome IndexTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">net.marklogic.testScripts.IndexTest</td><td><a href="#m0">verifyIndexPage</a></td><td rowspan="1">1563387577457</td><td rowspan="1">16598</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">chrome SearchTextTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">net.marklogic.testScripts.SearchTextTest</td><td><a href="#m1">verifySearchText</a></td><td rowspan="1">1563387622074</td><td rowspan="1">11931</td></tr></tbody>
+<tbody id="t2"><tr><th colspan="4">chrome QueryConsoleTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">net.marklogic.testScripts.QueryConsoleTest</td><td><a href="#m2">queryConsoleAutomationFlow</a></td><td rowspan="1">1563387661648</td><td rowspan="1">129354</td></tr></tbody>
+<tbody id="t3"><tr><th colspan="4">chrome AdminTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">net.marklogic.testScripts.AdminTest</td><td><a href="#m3">verifyAdminPage</a></td><td rowspan="1">1563387822820</td><td rowspan="1">12743</td></tr></tbody>
 </table>
-<h2>chrome QueryConsoleTest</h2><h3 id="m0">net.marklogic.testScripts.QueryConsoleTest#queryConsoleAutomationFlow</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">
-1:Open Query Console and execute a query to create a database<br/>
+<h2>chrome IndexTest</h2><h3 id="m0">net.marklogic.testScripts.IndexTest#verifyIndexPage</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">
+1.Verify index page title<br/>
+2:Verify index page all elements showing properly<br/>
+3.Click on radio button ascending and verify button is selected or not<br/>
+4:Click on search<br/>
+5:Verify after selecting search user is redirecting to the result page<br/>
+6:Verify result Page is showing correct result as users choice is ascending<br/>
+7.1:Verify document name is showing in ascending order<br/>
+7.2:Verify index page all elements showing properly<br/>
+8.Click on radio button descending and verify button is selected or not<br/>
+9:Click on search<br/>
+10:Verify after selecting search user is redirecting to the result page<br/>
+11:Verify result Page is showing correct result as users choice is descending<br/>
+12.1:Verify document name is showing in descending order<br/>
+12.2:Verify index page all elements showing properly<br/>
+13:Verify If User not select any radio button and search it will show message<br/>
+13.1:Click on search</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>chrome SearchTextTest</h2><h3 id="m1">net.marklogic.testScripts.SearchTextTest#verifySearchText</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">
+1:Check Search Page Title<br/>
+2:Verify searchTextBox and search button is present in the page<br/>
+3:Enter search term Text In TextBox<br/>
+4:Click On Search Button<br/>
+5:Verify  all results conatins searched term<br/>
+6:Verify search term highlighted<br/>
+7:Send false search term<br/>
+8:Verify Blank Page is Showing</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>chrome QueryConsoleTest</h2><h3 id="m2">net.marklogic.testScripts.QueryConsoleTest#queryConsoleAutomationFlow</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">
+1.1:Open Query Console and execute a query to create a database<br/>
+1.2:Select queryType<br/>
+1.3:Execute a query<br/>
 2:Verify the output shown when the query is been executed.<br/>
-3:Open Query Console and execute a query to create a forest<br/>
+3.1:Select DataBase<br/>
+3.2:Open Query Console and execute a query to create a forest<br/>
+3.3:Execute a query<br/>
 4:Verify the output shown when the query is been executed.<br/>
-5:Insert some data in the database created, using a query in Query Console itself<br/>
-6:Now move to admin page<br/>
-7: open the database created<br/>
-8: Move to status page<br/>
-9:check the count of the documents which are inserted on the status page.</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+5.1: Attach forest to database<br/>
+5.2:Verify the output shown when the query is been executed.<br/>
+5.3:Insert some data in the database created, using a query in Query Console itself<br/>
+5.4:Verify the output shown when the query is been executed.</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>chrome AdminTest</h2><h3 id="m3">net.marklogic.testScripts.AdminTest#verifyAdminPage</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">
+2: open the database created<br/>
+3: Move to status page<br/>
+4:check the count of the documents which are inserted on the status page.</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

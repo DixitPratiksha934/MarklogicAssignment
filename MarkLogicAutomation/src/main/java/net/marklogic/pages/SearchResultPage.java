@@ -55,7 +55,7 @@ public class SearchResultPage extends BasePage {
 		boolean flag = false;
 		for (WebElement searchTerm : resultList) {
 			waitForElement(searchTerm);
-		    moveToElement(searchTerm);
+			moveToElement(searchTerm);
 			if (getText(searchTerm).equals(searchResultTerm)) {
 				flag = true;
 				break;
@@ -63,9 +63,6 @@ public class SearchResultPage extends BasePage {
 		}
 		Assert.assertTrue(flag);
 	}
-
-
-
 
 	/* Verify Searched Term is Highlighted */
 	public void verifySearchedTermIsHighlighted(String searchResultTerm, String highlightedColor) {
@@ -84,7 +81,7 @@ public class SearchResultPage extends BasePage {
 
 	/* Verify if No Result Found */
 	public void verifyNoResultShowIfTermNotPresent() {
-		Assert.assertEquals(noResults.size(),0);
+		Assert.assertEquals(noResults.size(), 0);
 
 	}
 }

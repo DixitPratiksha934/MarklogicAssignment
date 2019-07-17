@@ -10,6 +10,7 @@
     <classes>
       <class name="net.marklogic.testScripts.QueryConsoleTest">
         <methods>
+          <include name="updateDataBaseValue"/>
           <include name="getTestData"/>
           <include name="queryConsoleAutomationFlow"/>
           <include name="before"/>

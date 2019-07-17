@@ -2,6 +2,9 @@ package net.marklogic.testScripts;
 
 import java.util.Properties;
 
+import org.jfree.util.Log;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -14,39 +17,65 @@ public class QueryConsoleTest extends BaseTest {
 	public void getTestData() throws Exception {
 		System.setProperty("className", getClass().getSimpleName());
 		Properties prop = Configuration.readTestData("RegressionTestData");
-		query1 = prop.getProperty("query1");
-		query2 = prop.getProperty("query2");
-
+		query1 = prop.getProperty("query");
+		query2=prop.getProperty("queryDocumentInsert");
 	}
 
 	@Test(description = "Query Console Automation Flow")
-	public void queryConsoleAutomationFlow() {
+	public void queryConsoleAutomationFlow()  {
 
 		reportLog("1.1:Open Query Console and execute a query to create a database");
-		qConsolePage.sendCommand(query1);
-
-		reportLog("1.2:Execute a query");
+		qConsolePage.selectQueryType(queryType);
+		qConsolePage.clickOnAddQuery();
+		
+		reportLog("1.2:Select queryType");
+		qConsolePage.insertDataBaseSendCommand(dataBaseName,query1);
+	
+		reportLog("1.3:Execute a query");
 		qConsolePage.clickOnRunButton();
 
 		reportLog("2:Verify the output shown when the query is been executed.");
-
-		reportLog("3.1:Open Query Console and execute a query to create a forest");
-
-		reportLog("3.2:Execute a query");
+		qConsolePage.verifyResultOfQuery();
+		
+		reportLog("3.1:Select DataBase");
+		qConsolePage.selectDataBase(dataBaseName);
+		
+		reportLog("3.2:Open Query Console and execute a query to create a forest");
+		qConsolePage.clickOnAddQuery();
+		qConsolePage.insertForestSendCommand(forestName,query1);
+		
+		reportLog("3.3:Execute a query");
 		qConsolePage.clickOnRunButton();
-
+		
 		reportLog("4:Verify the output shown when the query is been executed.");
+		qConsolePage.verifyResultOfQuery();
+		
+		reportLog("5.1: Attach forest to database");
+		
+		qConsolePage.clickOnAddQuery();
+		qConsolePage.attachForestToDataBase(dataBaseName,forestName,query1);
+		qConsolePage.clickOnRunButton();
+		
+		reportLog("5.2:Verify the output shown when the query is been executed.");
+		qConsolePage.verifyResultOfQuery();
 
-		reportLog("5:Insert some data in the database created, using a query in Query Console itself");
-
-		reportLog("6:Now move to admin page");
-
-		reportLog("7: open the database created");
-
-		reportLog("8: Move to status page");
-
-		reportLog("9:check the count of the documents which are inserted on the status page.");
-
+		reportLog("5.3:Insert some data in the database created, using a query in Query Console itself");
+		qConsolePage.clickOnAddQuery();
+		qConsolePage.insertDocument(query2);
+		qConsolePage.clickOnRunButton();
+		
+		reportLog("5.4:Verify the output shown when the query is been executed.");
+		qConsolePage.verifyResultofInsertedDocument();
+		
+	}
+	
+	@AfterMethod
+	public void updateDataBaseValue(ITestResult result) {
+		if (ITestResult.SUCCESS == result.getStatus()) {
+			Configuration.updatePropertyTestData("RegressionTestData", "dataBaseName", dataBaseName);
+		} else {
+			Log.error( dataBaseName+ "is not added for");
+		}
 	}
 
 }

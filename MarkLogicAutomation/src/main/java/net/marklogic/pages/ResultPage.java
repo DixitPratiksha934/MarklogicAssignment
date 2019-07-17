@@ -75,12 +75,11 @@ public class ResultPage extends BasePage {
 		List<String> listName = new ArrayList<>();
 		ArrayList<String> copyListName = new ArrayList<>();
 		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//b/p)[5]")));
-		for (int i = 0; i < documentNamesList.size(); i++) 
-			{
-				listName.add(getText(documentNamesList.get(i)));
-				copyListName.add(getText(documentNamesList.get(i)));
-			}
-			
+		for (int i = 0; i < documentNamesList.size(); i++) {
+			listName.add(getText(documentNamesList.get(i)));
+			copyListName.add(getText(documentNamesList.get(i)));
+		}
+
 		Collections.sort(listName, Collections.reverseOrder());
 		Assert.assertEquals(copyListName, listName);
 		navigateBack();

@@ -49,12 +49,12 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Complete_Suite">
-                    <span>F:\NewProjectLatest\LatestWorkSpace\vin\src\test\resources\testsuite\AllMarkLogicScripts.xml</span>
+                    <span>E:\MarkLogicGit\MarklogicAssignment\MarkLogicAutomation\src\test\resources\testsuite\AllMarkLogicScripts.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-Complete_Suite">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">4 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,6 +103,21 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Complete_Suite" title="net.marklogic.testScripts.QueryConsoleTest" hash-for-method="queryConsoleAutomationFlow">queryConsoleAutomationFlow</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Complete_Suite" title="net.marklogic.testScripts.AdminTest" hash-for-method="verifyAdminPage">verifyAdminPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Complete_Suite" title="net.marklogic.testScripts.IndexTest" hash-for-method="verifyIndexPage">verifyIndexPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Complete_Suite" title="net.marklogic.testScripts.SearchTextTest" hash-for-method="verifySearchText">verifySearchText</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Complete_Suite -->
@@ -134,10 +149,61 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Complete_Suite-class-passed -->
+          <div class="suite-Complete_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">net.marklogic.testScripts.AdminTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAdminPage">
+                  </a> <!-- verifyAdminPage -->
+                  <span class="method-name">verifyAdminPage</span>
+                  <em>
+(Verify Admin Page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Complete_Suite-class-passed -->
+          <div class="suite-Complete_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">net.marklogic.testScripts.SearchTextTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySearchText">
+                  </a> <!-- verifySearchText -->
+                  <span class="method-name">verifySearchText</span>
+                  <em>
+(Search Text and highlight the text in displayed results)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Complete_Suite-class-passed -->
+          <div class="suite-Complete_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">net.marklogic.testScripts.IndexTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyIndexPage">
+                  </a> <!-- verifyIndexPage -->
+                  <span class="method-name">verifyIndexPage</span>
+                  <em>
+(Sorting By Ascending and Descending Order and check results)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Complete_Suite-class-passed -->
         </div> <!-- panel Complete_Suite -->
         <div panel-name="test-xml-Complete_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">F:\NewProjectLatest\LatestWorkSpace\vin\src\test\resources\testsuite\AllMarkLogicScripts.xml</span>
+            <span class="header-content">E:\MarkLogicGit\MarklogicAssignment\MarkLogicAutomation\src\test\resources\testsuite\AllMarkLogicScripts.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -147,6 +213,20 @@
   &lt;listeners&gt;
     &lt;listener class-name=&quot;net.marklogic.report.TestCaseTrackingListners&quot;/&gt;
   &lt;/listeners&gt;
+  &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;chrome IndexTest&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+    &lt;parameter name=&quot;url&quot; value=&quot;http://admin:admin@localhost:8010/index.xqy&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;net.marklogic.testScripts.IndexTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- chrome IndexTest --&gt;
+  &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;chrome SearchTextTest&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+    &lt;parameter name=&quot;url&quot; value=&quot;http://admin:admin@localhost:8010/searchresult.xqy&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;net.marklogic.testScripts.SearchTextTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- chrome SearchTextTest --&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;chrome QueryConsoleTest&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;parameter name=&quot;url&quot; value=&quot;http://admin:admin@localhost:8000/qconsole/&quot;/&gt;
@@ -154,6 +234,13 @@
       &lt;class name=&quot;net.marklogic.testScripts.QueryConsoleTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- chrome QueryConsoleTest --&gt;
+  &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;chrome AdminTest&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+    &lt;parameter name=&quot;url&quot; value=&quot;http://admin:admin@localhost:8001/&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;net.marklogic.testScripts.AdminTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- chrome AdminTest --&gt;
 &lt;/suite&gt; &lt;!-- Complete Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -165,7 +252,16 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
+                <span class="test-name">chrome IndexTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">chrome SearchTextTest (1 class)</span>
+              </li>
+              <li>
                 <span class="test-name">chrome QueryConsoleTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">chrome AdminTest (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -191,16 +287,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'queryConsoleAutomationFlow')
 data.setCell(0, 2, 'net.marklogic.testScripts.QueryConsoleTest')
-data.setCell(0, 3, 2252);
+data.setCell(0, 3, 129354);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'verifyIndexPage')
+data.setCell(1, 2, 'net.marklogic.testScripts.IndexTest')
+data.setCell(1, 3, 16598);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'verifyAdminPage')
+data.setCell(2, 2, 'net.marklogic.testScripts.AdminTest')
+data.setCell(2, 3, 12743);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'verifySearchText')
+data.setCell(3, 2, 'net.marklogic.testScripts.SearchTextTest')
+data.setCell(3, 3, 11931);
 window.suiteTableData['Complete_Suite']= { tableData: data, tableDiv: 'times-div-Complete_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Complete_Suite">
               </div> <!-- times-div-Complete_Suite -->
             </div> <!-- times-div -->
@@ -212,26 +320,101 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyIndexPage</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">
+1.Verify index page title</span>
+                <span class="reporter-method-output">
+2:Verify index page all elements showing properly</span>
+                <span class="reporter-method-output">
+3.Click on radio button ascending and verify button is selected or not</span>
+                <span class="reporter-method-output">
+4:Click on search</span>
+                <span class="reporter-method-output">
+5:Verify after selecting search user is redirecting to the result page</span>
+                <span class="reporter-method-output">
+6:Verify result Page is showing correct result as users choice is ascending</span>
+                <span class="reporter-method-output">
+7.1:Verify document name is showing in ascending order</span>
+                <span class="reporter-method-output">
+7.2:Verify index page all elements showing properly</span>
+                <span class="reporter-method-output">
+8.Click on radio button descending and verify button is selected or not</span>
+                <span class="reporter-method-output">
+9:Click on search</span>
+                <span class="reporter-method-output">
+10:Verify after selecting search user is redirecting to the result page</span>
+                <span class="reporter-method-output">
+11:Verify result Page is showing correct result as users choice is descending</span>
+                <span class="reporter-method-output">
+12.1:Verify document name is showing in descending order</span>
+                <span class="reporter-method-output">
+12.2:Verify index page all elements showing properly</span>
+                <span class="reporter-method-output">
+13:Verify If User not select any radio button and search it will show message</span>
+                <span class="reporter-method-output">
+13.1:Click on search</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifySearchText</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">
+1:Check Search Page Title</span>
+                <span class="reporter-method-output">
+2:Verify searchTextBox and search button is present in the page</span>
+                <span class="reporter-method-output">
+3:Enter search term Text In TextBox</span>
+                <span class="reporter-method-output">
+4:Click On Search Button</span>
+                <span class="reporter-method-output">
+5:Verify  all results conatins searched term</span>
+                <span class="reporter-method-output">
+6:Verify search term highlighted</span>
+                <span class="reporter-method-output">
+7:Send false search term</span>
+                <span class="reporter-method-output">
+8:Verify Blank Page is Showing</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
               <span class="reporter-method-name">queryConsoleAutomationFlow</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">
-1:Open Query Console and execute a query to create a database</span>
+1.1:Open Query Console and execute a query to create a database</span>
+                <span class="reporter-method-output">
+1.2:Select queryType</span>
+                <span class="reporter-method-output">
+1.3:Execute a query</span>
                 <span class="reporter-method-output">
 2:Verify the output shown when the query is been executed.</span>
                 <span class="reporter-method-output">
-3:Open Query Console and execute a query to create a forest</span>
+3.1:Select DataBase</span>
+                <span class="reporter-method-output">
+3.2:Open Query Console and execute a query to create a forest</span>
+                <span class="reporter-method-output">
+3.3:Execute a query</span>
                 <span class="reporter-method-output">
 4:Verify the output shown when the query is been executed.</span>
                 <span class="reporter-method-output">
-5:Insert some data in the database created, using a query in Query Console itself</span>
+5.1: Attach forest to database</span>
                 <span class="reporter-method-output">
-6:Now move to admin page</span>
+5.2:Verify the output shown when the query is been executed.</span>
                 <span class="reporter-method-output">
-7: open the database created</span>
+5.3:Insert some data in the database created, using a query in Query Console itself</span>
                 <span class="reporter-method-output">
-8: Move to status page</span>
+5.4:Verify the output shown when the query is been executed.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyAdminPage</span>
+              <div class="reporter-method-output-div">
                 <span class="reporter-method-output">
-9:check the count of the documents which are inserted on the status page.</span>
+2: open the database created</span>
+                <span class="reporter-method-output">
+3: Move to status page</span>
+                <span class="reporter-method-output">
+4:check the count of the documents which are inserted on the status page.</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -249,30 +432,90 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">net.marklogic.testScripts.QueryConsoleTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">net.marklogic.testScripts.AdminTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">before</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">net.marklogic.testScripts.IndexTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">setUp(public void net.marklogic.testScripts.QueryConsoleTest.queryConsoleAutomationFlow(), chrome, http://...)</span>
-                <span class="method-start">1110 ms</span>
+                <span class="method-name">setUp(public void net.marklogic.testScripts.IndexTest.verifyIndexPage(), chrome, http://admin:admin@localh...)</span>
+                <span class="method-start">616 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyIndexPage</span>
+                <span class="method-start">29510 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMainMethod([TestResult name=verifyIndexPage status=SUCCESS method=IndexTest.verifyIndexPage()[pri:0, instance:n...)</span>
+                <span class="method-start">46111 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">net.marklogic.testScripts.SearchTextTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(public void net.marklogic.testScripts.SearchTextTest.verifySearchText(), chrome, http://admin:admin@...)</span>
+                <span class="method-start">47723 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">getTestData</span>
-                <span class="method-start">37536 ms</span>
+                <span class="method-start">74125 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifySearchText</span>
+                <span class="method-start">74127 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMainMethod([TestResult name=verifySearchText status=SUCCESS method=SearchTextTest.verifySearchText()[pri:0, ins...)</span>
+                <span class="method-start">86061 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">net.marklogic.testScripts.QueryConsoleTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(public void net.marklogic.testScripts.QueryConsoleTest.queryConsoleAutomationFlow() throws java.lang...)</span>
+                <span class="method-start">87708 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">getTestData</span>
+                <span class="method-start">113700 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">queryConsoleAutomationFlow</span>
-                <span class="method-start">37537 ms</span>
+                <span class="method-start">113701 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
+                <span class="method-name">updateDataBaseValue([TestResult name=queryConsoleAutomationFlow status=SUCCESS method=QueryConsoleTest.queryConsoleAutom...)</span>
+                <span class="method-start">243057 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
                 <span class="method-name">afterMainMethod([TestResult name=queryConsoleAutomationFlow status=SUCCESS method=QueryConsoleTest.queryConsoleAutom...)</span>
-                <span class="method-start">39793 ms</span>
+                <span class="method-start">243263 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">net.marklogic.testScripts.AdminTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(public void net.marklogic.testScripts.AdminTest.verifyAdminPage() throws java.lang.InterruptedExcept...)</span>
+                <span class="method-start">245019 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">getTestData</span>
+                <span class="method-start">274870 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyAdminPage</span>
+                <span class="method-start">274873 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMainMethod([TestResult name=verifyAdminPage status=SUCCESS method=AdminTest.verifyAdminPage()[pri:0, instance:n...)</span>
+                <span class="method-start">287617 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">tearDownSuite</span>
-                <span class="method-start">45309 ms</span>
+                <span class="method-start">290579 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

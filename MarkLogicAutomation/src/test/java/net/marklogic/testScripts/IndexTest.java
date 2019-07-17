@@ -1,14 +1,11 @@
 package net.marklogic.testScripts;
 
-
 import org.testng.annotations.Test;
 
 import net.marklogic.selenium.core.BaseTest;
-import net.marklogic.utilities.Constants;
 
 public class IndexTest extends BaseTest {
-	
-	
+
 	/*----------------Sort Functionality Script-----------------------------------------*/
 	@Test(description = "Sorting By Ascending and Descending Order and check results")
 	public void verifyIndexPage() {
@@ -20,7 +17,7 @@ public class IndexTest extends BaseTest {
 		indexPage.verifyIndexPage();
 
 		reportLog("3.Click on radio button ascending and verify button is selected or not");
-		indexPage.clickOnRadioButtonandVerifyIsSelected(Constants.ascendingRadioButton);
+		indexPage.clickOnRadioButtonandVerifyIsSelected(ascendingRadioButton);
 
 		reportLog("4:Click on search");
 		resultPage = indexPage.clickOnSearchButton();
@@ -33,12 +30,12 @@ public class IndexTest extends BaseTest {
 
 		reportLog("7.1:Verify document name is showing in ascending order");
 		resultPage.verifyDocumnetNameOrderIsAscending();
-		
+
 		reportLog("7.2:Verify index page all elements showing properly");
 		indexPage.verifyIndexPage();
 
 		reportLog("8.Click on radio button descending and verify button is selected or not");
-		indexPage.clickOnRadioButtonandVerifyIsSelected(Constants.descendingRadioButton);
+		indexPage.clickOnRadioButtonandVerifyIsSelected(descendingRadioButton);
 
 		reportLog("9:Click on search");
 		resultPage = indexPage.clickOnSearchButton();
@@ -51,13 +48,13 @@ public class IndexTest extends BaseTest {
 
 		reportLog("12.1:Verify document name is showing in descending order");
 		resultPage.verifyDocumnetNameOrderIsdescending();
-		
+
 		reportLog("12.2:Verify index page all elements showing properly");
 		indexPage.verifyIndexPage();
 
 		reportLog("13:Verify If User not select any radio button and search it will show message");
 		resultPage.refreshPage();
-		
+
 		reportLog("13.1:Click on search");
 		resultPage = indexPage.clickOnSearchButton();
 		resultPage.verifyIfUserClicksOnSearchWithoutSelectionRadio();

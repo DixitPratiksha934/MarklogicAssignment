@@ -15,7 +15,6 @@ import com.google.common.base.Function;
 import com.relevantcodes.extentreports.ExtentTest;
 import net.marklogic.utilities.DateCalendar;
 import net.marklogic.utilities.Utilities;
-
 import org.apache.commons.io.FileUtils;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.openqa.selenium.*;
@@ -30,7 +29,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
-
 import java.awt.*;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
@@ -40,7 +38,6 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.time.DayOfWeek;
-import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
@@ -184,8 +181,7 @@ public abstract class BasePage {
 	}
 
 	/** Setting up implicit wait that will be used internally */
-	private void setImplicitWait(int timeInSec) {
-		logger.info("setImplicitWait, timeInSec={}", timeInSec);
+	public void setImplicitWait(int timeInSec) {
 		driver.manage().timeouts().implicitlyWait(timeInSec, TimeUnit.SECONDS);
 	}
 
@@ -226,17 +222,6 @@ public abstract class BasePage {
 		WebDriverWait wait = new WebDriverWait(driver, timeOut);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(ByLocator(locator)));
 	}
-
-	/**
-	 * Wait for list to be present and visible
-	 */
-
-	@SuppressWarnings({ "unchecked", "rawtypes" })
-	// public void waitForListpresentAndVisible(List list) {
-	// WebDriverWait wait = new WebDriverWait(driver, timeout);
-	// wait.until((Predicate<WebDriver>)
-	// ExpectedConditions.visibilityOfAllElements(list));
-	// }
 
 	/** normal wait for thread. */
 	public void _normalWait(long timeOut) {
@@ -392,9 +377,7 @@ public abstract class BasePage {
 
 	/** Condition to customize */
 	public void customizableCondition(WebDriver driver, int waitTime, final Boolean condition) {
-		// setWaitTimeToZero(driver);
 		new WebDriverWait(driver, waitTime).until((ExpectedCondition<Boolean>) driver1 -> condition);
-		// setWaitTime(driver, DEFAULT_WAIT_4_ELEMENT);
 	}
 
 	/** Wait for element to be clickable */
@@ -402,11 +385,8 @@ public abstract class BasePage {
 	public WebElement waitForElementClickable(WebElement webElement, int timeOutInSeconds) {
 		WebElement element;
 		try {
-			// setWaitTimeToZero(driver);
 			WebDriverWait wait = new WebDriverWait(driver, timeOutInSeconds);
 			element = wait.until(ExpectedConditions.elementToBeClickable(webElement));
-
-			// setWaitTime(driver, DEFAULT_WAIT_4_ELEMENT);
 			return element;
 
 		} catch (Exception e) {
@@ -418,11 +398,8 @@ public abstract class BasePage {
 	public WebElement waitForElementPresent(final By by, int timeOutInSeconds) {
 		WebElement element;
 		try {
-			// setWaitTimeToZero(driver);
 			WebDriverWait wait = new WebDriverWait(driver, timeOutInSeconds);
 			element = wait.until(ExpectedConditions.presenceOfElementLocated(by));
-
-			// setWaitTime(driver, DEFAULT_WAIT_4_ELEMENT);
 			return element;
 		} catch (Exception e) {
 		}
@@ -593,23 +570,6 @@ public abstract class BasePage {
 		new Select(element).selectByVisibleText(targetValue);
 	}
 
-	public void selectDropDownWithOptGroups(WebElement select, String targetValue) {
-		boolean selected = false;
-		try {
-		
-			List<WebElement> options = select.findElements(By.tagName("option"));
-			for (WebElement option : options) {
-				if (option.getText().contains(targetValue)) {
-					option.click();
-					selected = true;
-					break;
-				}
-			}
-		} catch (Exception e) {
-		}
-		Assert.assertTrue(selected);
-	}
-
 	/** Select element by Index */
 	public void selectDropDownByIndex(WebElement element, int index) {
 		waitForElement(element);
@@ -774,24 +734,6 @@ public abstract class BasePage {
 	public void scrollIntoView(By by) {
 		WebElement elem = getDriver().findElement(by);
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", new Object[] { elem });
-	}
-
-	/**
-	 * To load all the records by scrolling down the page
-	 * 
-	 * @param totalPages
-	 */
-	public void loadCompleteList(WebElement totalPages) {
-		_normalWait(3000);
-		if (totalPages.isDisplayed()) {
-			String[] totalPagesCount = totalPages.getText().split("\\ /");
-			int intialPagePos = 1;
-			while (intialPagePos <= Integer.valueOf(totalPagesCount[1].replaceAll(" ", ""))) {
-				scrollToDocumentHeight();
-				_normalWait(3000);
-				intialPagePos++;
-			}
-		}
 	}
 
 	/** Capturing screenshot once script is failed */
@@ -1045,7 +987,7 @@ public abstract class BasePage {
 	}
 
 	public void waitForElement() throws InterruptedException {
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 	}
 
 	/**
@@ -1168,40 +1110,6 @@ public abstract class BasePage {
 			status = false;
 		}
 		return status;
-	}
-
-	/**
-	 * Get System current date time stamp in DD-MMM-YYYY format
-	 * 
-	 * @return
-	 */
-	public void verifyDateFormat(WebElement calenderWebelement) {
-
-		boolean dateFormatFlag = false;
-
-		LocalDateTime currentTime = LocalDateTime.now();
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d-MMM-uuuu");
-		String systemFormatDateTime = currentTime.format(formatter);
-		String dateStr = systemFormatDateTime.replace("-", "").replace(" ", "");
-
-		String dateAndTimeSTR = calenderWebelement.getText();
-		String formattedDate = dateAndTimeSTR.replace("-", "").replace(" ", "");
-
-		/*
-		 * int k = formattedDate.indexOf(" ", formattedDate.indexOf(" ") + 1);
-		 * String dateFormat1 = formattedDate.substring(0, k);
-		 * 
-		 * int i = dateFormat1.indexOf(" ", dateFormat1.indexOf(" ")); String
-		 * dateFormat3 = dateFormat1.substring(0, i);
-		 */
-
-		if (dateStr.length() <= formattedDate.length()) {
-			dateFormatFlag = true;
-			Assert.assertTrue(dateFormatFlag, "Date displayed in DDMMMYYYY Format");
-
-		} else {
-			Assert.assertFalse(dateFormatFlag);
-		}
 	}
 
 	/**
@@ -1357,11 +1265,9 @@ public abstract class BasePage {
 		try {
 			File file = new File(FileLocation);
 			if (file.exists()) {
-				// long startTime = System.currentTimeMillis();
 				Desktop.getDesktop().open(file);
 				_normalWait(4000);
 				flag = true;
-				// long endTime = System.currentTimeMillis();
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -1390,22 +1296,6 @@ public abstract class BasePage {
 			e.printStackTrace();
 		}
 		return document;
-	}
-
-	/*
-	 * This function creates a List and switches to window which is not current
-	 */
-
-	public void switchToNewWindow() {
-
-		String currentWindow = driver.getWindowHandle();
-		Set<String> allHandles = driver.getWindowHandles();
-		allHandles.remove(currentWindow);
-
-		for (Iterator<String> it = allHandles.iterator(); ((Iterator) it).hasNext();) {
-			String newHandle = it.next();
-			driver.switchTo().window(newHandle);
-		}
 	}
 
 	/**
@@ -1438,5 +1328,9 @@ public abstract class BasePage {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].setAttribute('style', 'background: ; border: 0px;');", lastElem);
 
+	}
+
+	public void normalWait() throws InterruptedException {
+		Thread.sleep(4000);
 	}
 }

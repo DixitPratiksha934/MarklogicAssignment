@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
     <line>
       <![CDATA[
@@ -11,7 +11,127 @@ Invoke target Environment - null ]]>
     </line>
     <line>
       <![CDATA[
-1:Open Query Console and execute a query to create a database]]>
+1.Verify index page title]]>
+    </line>
+    <line>
+      <![CDATA[
+2:Verify index page all elements showing properly]]>
+    </line>
+    <line>
+      <![CDATA[
+3.Click on radio button ascending and verify button is selected or not]]>
+    </line>
+    <line>
+      <![CDATA[
+4:Click on search]]>
+    </line>
+    <line>
+      <![CDATA[
+5:Verify after selecting search user is redirecting to the result page]]>
+    </line>
+    <line>
+      <![CDATA[
+6:Verify result Page is showing correct result as users choice is ascending]]>
+    </line>
+    <line>
+      <![CDATA[
+7.1:Verify document name is showing in ascending order]]>
+    </line>
+    <line>
+      <![CDATA[
+7.2:Verify index page all elements showing properly]]>
+    </line>
+    <line>
+      <![CDATA[
+8.Click on radio button descending and verify button is selected or not]]>
+    </line>
+    <line>
+      <![CDATA[
+9:Click on search]]>
+    </line>
+    <line>
+      <![CDATA[
+10:Verify after selecting search user is redirecting to the result page]]>
+    </line>
+    <line>
+      <![CDATA[
+11:Verify result Page is showing correct result as users choice is descending]]>
+    </line>
+    <line>
+      <![CDATA[
+12.1:Verify document name is showing in descending order]]>
+    </line>
+    <line>
+      <![CDATA[
+12.2:Verify index page all elements showing properly]]>
+    </line>
+    <line>
+      <![CDATA[
+13:Verify If User not select any radio button and search it will show message]]>
+    </line>
+    <line>
+      <![CDATA[
+13.1:Click on search]]>
+    </line>
+    <line>
+      <![CDATA[
+Initialize Browser - chrome ]]>
+    </line>
+    <line>
+      <![CDATA[
+Invoke target Environment - null ]]>
+    </line>
+    <line>
+      <![CDATA[
+1:Check Search Page Title]]>
+    </line>
+    <line>
+      <![CDATA[
+2:Verify searchTextBox and search button is present in the page]]>
+    </line>
+    <line>
+      <![CDATA[
+3:Enter search term Text In TextBox]]>
+    </line>
+    <line>
+      <![CDATA[
+4:Click On Search Button]]>
+    </line>
+    <line>
+      <![CDATA[
+5:Verify  all results conatins searched term]]>
+    </line>
+    <line>
+      <![CDATA[
+6:Verify search term highlighted]]>
+    </line>
+    <line>
+      <![CDATA[
+7:Send false search term]]>
+    </line>
+    <line>
+      <![CDATA[
+8:Verify Blank Page is Showing]]>
+    </line>
+    <line>
+      <![CDATA[
+Initialize Browser - chrome ]]>
+    </line>
+    <line>
+      <![CDATA[
+Invoke target Environment - null ]]>
+    </line>
+    <line>
+      <![CDATA[
+1.1:Open Query Console and execute a query to create a database]]>
+    </line>
+    <line>
+      <![CDATA[
+1.2:Select queryType]]>
+    </line>
+    <line>
+      <![CDATA[
+1.3:Execute a query]]>
     </line>
     <line>
       <![CDATA[
@@ -19,7 +139,15 @@ Invoke target Environment - null ]]>
     </line>
     <line>
       <![CDATA[
-3:Open Query Console and execute a query to create a forest]]>
+3.1:Select DataBase]]>
+    </line>
+    <line>
+      <![CDATA[
+3.2:Open Query Console and execute a query to create a forest]]>
+    </line>
+    <line>
+      <![CDATA[
+3.3:Execute a query]]>
     </line>
     <line>
       <![CDATA[
@@ -27,39 +155,249 @@ Invoke target Environment - null ]]>
     </line>
     <line>
       <![CDATA[
-5:Insert some data in the database created, using a query in Query Console itself]]>
+5.1: Attach forest to database]]>
     </line>
     <line>
       <![CDATA[
-6:Now move to admin page]]>
+5.2:Verify the output shown when the query is been executed.]]>
     </line>
     <line>
       <![CDATA[
-7: open the database created]]>
+5.3:Insert some data in the database created, using a query in Query Console itself]]>
     </line>
     <line>
       <![CDATA[
-8: Move to status page]]>
+5.4:Verify the output shown when the query is been executed.]]>
     </line>
     <line>
       <![CDATA[
-9:check the count of the documents which are inserted on the status page.]]>
+Initialize Browser - chrome ]]>
+    </line>
+    <line>
+      <![CDATA[
+Invoke target Environment - null ]]>
+    </line>
+    <line>
+      <![CDATA[
+2: open the database created]]>
+    </line>
+    <line>
+      <![CDATA[
+3: Move to status page]]>
+    </line>
+    <line>
+      <![CDATA[
+4:check the count of the documents which are inserted on the status page.]]>
     </line>
   </reporter-output>
-  <suite name="Complete Suite" duration-ms="44181" started-at="2019-07-15T16:30:47Z" finished-at="2019-07-15T16:31:31Z">
+  <suite name="Complete Suite" duration-ms="289981" started-at="2019-07-17T18:19:08Z" finished-at="2019-07-17T18:23:58Z">
     <groups>
     </groups>
-    <test name="chrome QueryConsoleTest" duration-ms="44181" started-at="2019-07-15T16:30:47Z" finished-at="2019-07-15T16:31:31Z">
-      <class name="net.marklogic.testScripts.QueryConsoleTest">
-        <test-method status="PASS" signature="before()[pri:0, instance:net.marklogic.testScripts.QueryConsoleTest@1b083826]" name="before" is-config="true" duration-ms="1070" started-at="2019-07-15T16:30:46Z" finished-at="2019-07-15T16:30:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- before -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, java.lang.String, java.lang.String)[pri:0, instance:net.marklogic.testScripts.QueryConsoleTest@1b083826]" name="setUp" is-config="true" duration-ms="36426" started-at="2019-07-15T16:30:47Z" finished-at="2019-07-15T16:31:23Z">
+    <test name="chrome IndexTest" duration-ms="47058" started-at="2019-07-17T18:19:08Z" finished-at="2019-07-17T18:19:55Z">
+      <class name="net.marklogic.testScripts.IndexTest">
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, java.lang.String, java.lang.String)[pri:0, instance:net.marklogic.testScripts.IndexTest@2890c451]" name="setUp" is-config="true" duration-ms="28894" started-at="2019-07-17T18:19:08Z" finished-at="2019-07-17T18:19:37Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void net.marklogic.testScripts.QueryConsoleTest.queryConsoleAutomationFlow()]]>
+                <![CDATA[public void net.marklogic.testScripts.IndexTest.verifyIndexPage()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[http://admin:admin@localhost:8010/index.xqy]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[
+Initialize Browser - chrome ]]>
+            </line>
+            <line>
+              <![CDATA[
+Invoke target Environment - null ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyIndexPage()[pri:0, instance:net.marklogic.testScripts.IndexTest@2890c451]" name="verifyIndexPage" duration-ms="16598" started-at="2019-07-17T18:19:37Z" description="Sorting By Ascending and Descending Order and check results" finished-at="2019-07-17T18:19:54Z">
+          <reporter-output>
+            <line>
+              <![CDATA[
+1.Verify index page title]]>
+            </line>
+            <line>
+              <![CDATA[
+2:Verify index page all elements showing properly]]>
+            </line>
+            <line>
+              <![CDATA[
+3.Click on radio button ascending and verify button is selected or not]]>
+            </line>
+            <line>
+              <![CDATA[
+4:Click on search]]>
+            </line>
+            <line>
+              <![CDATA[
+5:Verify after selecting search user is redirecting to the result page]]>
+            </line>
+            <line>
+              <![CDATA[
+6:Verify result Page is showing correct result as users choice is ascending]]>
+            </line>
+            <line>
+              <![CDATA[
+7.1:Verify document name is showing in ascending order]]>
+            </line>
+            <line>
+              <![CDATA[
+7.2:Verify index page all elements showing properly]]>
+            </line>
+            <line>
+              <![CDATA[
+8.Click on radio button descending and verify button is selected or not]]>
+            </line>
+            <line>
+              <![CDATA[
+9:Click on search]]>
+            </line>
+            <line>
+              <![CDATA[
+10:Verify after selecting search user is redirecting to the result page]]>
+            </line>
+            <line>
+              <![CDATA[
+11:Verify result Page is showing correct result as users choice is descending]]>
+            </line>
+            <line>
+              <![CDATA[
+12.1:Verify document name is showing in descending order]]>
+            </line>
+            <line>
+              <![CDATA[
+12.2:Verify index page all elements showing properly]]>
+            </line>
+            <line>
+              <![CDATA[
+13:Verify If User not select any radio button and search it will show message]]>
+            </line>
+            <line>
+              <![CDATA[
+13.1:Click on search]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyIndexPage -->
+        <test-method status="PASS" signature="afterMainMethod(org.testng.ITestResult)[pri:0, instance:net.marklogic.testScripts.IndexTest@2890c451]" name="afterMainMethod" is-config="true" duration-ms="1528" started-at="2019-07-17T18:19:54Z" finished-at="2019-07-17T18:19:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyIndexPage status=SUCCESS method=IndexTest.verifyIndexPage()[pri:0, instance:net.marklogic.testScripts.IndexTest@2890c451] output=
+1.Verify index page title]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMainMethod -->
+      </class> <!-- net.marklogic.testScripts.IndexTest -->
+    </test> <!-- chrome IndexTest -->
+    <test name="chrome SearchTextTest" duration-ms="39970" started-at="2019-07-17T18:19:55Z" finished-at="2019-07-17T18:20:35Z">
+      <class name="net.marklogic.testScripts.SearchTextTest">
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, java.lang.String, java.lang.String)[pri:0, instance:net.marklogic.testScripts.SearchTextTest@3ee0fea4]" name="setUp" is-config="true" duration-ms="26402" started-at="2019-07-17T18:19:55Z" finished-at="2019-07-17T18:20:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void net.marklogic.testScripts.SearchTextTest.verifySearchText()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[http://admin:admin@localhost:8010/searchresult.xqy]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[
+Initialize Browser - chrome ]]>
+            </line>
+            <line>
+              <![CDATA[
+Invoke target Environment - null ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="getTestData()[pri:0, instance:net.marklogic.testScripts.SearchTextTest@3ee0fea4]" name="getTestData" is-config="true" duration-ms="2" started-at="2019-07-17T18:20:22Z" finished-at="2019-07-17T18:20:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTestData -->
+        <test-method status="PASS" signature="verifySearchText()[pri:0, instance:net.marklogic.testScripts.SearchTextTest@3ee0fea4]" name="verifySearchText" duration-ms="11931" started-at="2019-07-17T18:20:22Z" description="Search Text and highlight the text in displayed results" finished-at="2019-07-17T18:20:34Z">
+          <reporter-output>
+            <line>
+              <![CDATA[
+1:Check Search Page Title]]>
+            </line>
+            <line>
+              <![CDATA[
+2:Verify searchTextBox and search button is present in the page]]>
+            </line>
+            <line>
+              <![CDATA[
+3:Enter search term Text In TextBox]]>
+            </line>
+            <line>
+              <![CDATA[
+4:Click On Search Button]]>
+            </line>
+            <line>
+              <![CDATA[
+5:Verify  all results conatins searched term]]>
+            </line>
+            <line>
+              <![CDATA[
+6:Verify search term highlighted]]>
+            </line>
+            <line>
+              <![CDATA[
+7:Send false search term]]>
+            </line>
+            <line>
+              <![CDATA[
+8:Verify Blank Page is Showing]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifySearchText -->
+        <test-method status="PASS" signature="afterMainMethod(org.testng.ITestResult)[pri:0, instance:net.marklogic.testScripts.SearchTextTest@3ee0fea4]" name="afterMainMethod" is-config="true" duration-ms="1630" started-at="2019-07-17T18:20:34Z" finished-at="2019-07-17T18:20:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifySearchText status=SUCCESS method=SearchTextTest.verifySearchText()[pri:0, instance:net.marklogic.testScripts.SearchTextTest@3ee0fea4] output=
+1:Check Search Page Title]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMainMethod -->
+      </class> <!-- net.marklogic.testScripts.SearchTextTest -->
+    </test> <!-- chrome SearchTextTest -->
+    <test name="chrome QueryConsoleTest" duration-ms="157282" started-at="2019-07-17T18:20:35Z" finished-at="2019-07-17T18:23:12Z">
+      <class name="net.marklogic.testScripts.QueryConsoleTest">
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, java.lang.String, java.lang.String)[pri:0, instance:net.marklogic.testScripts.QueryConsoleTest@5906ebcb]" name="setUp" is-config="true" duration-ms="25991" started-at="2019-07-17T18:20:35Z" finished-at="2019-07-17T18:21:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void net.marklogic.testScripts.QueryConsoleTest.queryConsoleAutomationFlow() throws java.lang.Exception]]>
               </value>
             </param>
             <param index="1">
@@ -84,15 +422,23 @@ Invoke target Environment - null ]]>
             </line>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="getTestData()[pri:0, instance:net.marklogic.testScripts.QueryConsoleTest@1b083826]" name="getTestData" is-config="true" duration-ms="1" started-at="2019-07-15T16:31:23Z" finished-at="2019-07-15T16:31:23Z">
+        <test-method status="PASS" signature="getTestData()[pri:0, instance:net.marklogic.testScripts.QueryConsoleTest@5906ebcb]" name="getTestData" is-config="true" duration-ms="1" started-at="2019-07-17T18:21:01Z" finished-at="2019-07-17T18:21:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getTestData -->
-        <test-method status="PASS" signature="queryConsoleAutomationFlow()[pri:0, instance:net.marklogic.testScripts.QueryConsoleTest@1b083826]" name="queryConsoleAutomationFlow" duration-ms="2252" started-at="2019-07-15T16:31:23Z" description="Query Console Automation Flow" finished-at="2019-07-15T16:31:26Z">
+        <test-method status="PASS" signature="queryConsoleAutomationFlow()[pri:0, instance:net.marklogic.testScripts.QueryConsoleTest@5906ebcb]" name="queryConsoleAutomationFlow" duration-ms="129354" started-at="2019-07-17T18:21:01Z" description="Query Console Automation Flow" finished-at="2019-07-17T18:23:11Z">
           <reporter-output>
             <line>
               <![CDATA[
-1:Open Query Console and execute a query to create a database]]>
+1.1:Open Query Console and execute a query to create a database]]>
+            </line>
+            <line>
+              <![CDATA[
+1.2:Select queryType]]>
+            </line>
+            <line>
+              <![CDATA[
+1.3:Execute a query]]>
             </line>
             <line>
               <![CDATA[
@@ -100,7 +446,15 @@ Invoke target Environment - null ]]>
             </line>
             <line>
               <![CDATA[
-3:Open Query Console and execute a query to create a forest]]>
+3.1:Select DataBase]]>
+            </line>
+            <line>
+              <![CDATA[
+3.2:Open Query Console and execute a query to create a forest]]>
+            </line>
+            <line>
+              <![CDATA[
+3.3:Execute a query]]>
             </line>
             <line>
               <![CDATA[
@@ -108,43 +462,120 @@ Invoke target Environment - null ]]>
             </line>
             <line>
               <![CDATA[
-5:Insert some data in the database created, using a query in Query Console itself]]>
+5.1: Attach forest to database]]>
             </line>
             <line>
               <![CDATA[
-6:Now move to admin page]]>
+5.2:Verify the output shown when the query is been executed.]]>
             </line>
             <line>
               <![CDATA[
-7: open the database created]]>
+5.3:Insert some data in the database created, using a query in Query Console itself]]>
             </line>
             <line>
               <![CDATA[
-8: Move to status page]]>
-            </line>
-            <line>
-              <![CDATA[
-9:check the count of the documents which are inserted on the status page.]]>
+5.4:Verify the output shown when the query is been executed.]]>
             </line>
           </reporter-output>
         </test-method> <!-- queryConsoleAutomationFlow -->
-        <test-method status="PASS" signature="afterMainMethod(org.testng.ITestResult)[pri:0, instance:net.marklogic.testScripts.QueryConsoleTest@1b083826]" name="afterMainMethod" is-config="true" duration-ms="5458" started-at="2019-07-15T16:31:26Z" finished-at="2019-07-15T16:31:31Z">
+        <test-method status="PASS" signature="updateDataBaseValue(org.testng.ITestResult)[pri:0, instance:net.marklogic.testScripts.QueryConsoleTest@5906ebcb]" name="updateDataBaseValue" is-config="true" duration-ms="206" started-at="2019-07-17T18:23:11Z" finished-at="2019-07-17T18:23:11Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=queryConsoleAutomationFlow status=SUCCESS method=QueryConsoleTest.queryConsoleAutomationFlow()[pri:0, instance:net.marklogic.testScripts.QueryConsoleTest@1b083826] output=
-1:Open Query Console and execute a query to create a database]]]>
+                <![CDATA[[TestResult name=queryConsoleAutomationFlow status=SUCCESS method=QueryConsoleTest.queryConsoleAutomationFlow()[pri:0, instance:net.marklogic.testScripts.QueryConsoleTest@5906ebcb] output=
+1.1:Open Query Console and execute a query to create a database]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateDataBaseValue -->
+        <test-method status="PASS" signature="afterMainMethod(org.testng.ITestResult)[pri:0, instance:net.marklogic.testScripts.QueryConsoleTest@5906ebcb]" name="afterMainMethod" is-config="true" duration-ms="1724" started-at="2019-07-17T18:23:11Z" finished-at="2019-07-17T18:23:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=queryConsoleAutomationFlow status=SUCCESS method=QueryConsoleTest.queryConsoleAutomationFlow()[pri:0, instance:net.marklogic.testScripts.QueryConsoleTest@5906ebcb] output=
+1.1:Open Query Console and execute a query to create a database]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMainMethod -->
-        <test-method status="PASS" signature="tearDownSuite()[pri:0, instance:net.marklogic.testScripts.QueryConsoleTest@1b083826]" name="tearDownSuite" is-config="true" duration-ms="702" started-at="2019-07-15T16:31:31Z" finished-at="2019-07-15T16:31:32Z">
+      </class> <!-- net.marklogic.testScripts.QueryConsoleTest -->
+    </test> <!-- chrome QueryConsoleTest -->
+    <test name="chrome AdminTest" duration-ms="45552" started-at="2019-07-17T18:23:12Z" finished-at="2019-07-17T18:23:58Z">
+      <class name="net.marklogic.testScripts.AdminTest">
+        <test-method status="PASS" signature="before()[pri:0, instance:net.marklogic.testScripts.AdminTest@21507a04]" name="before" is-config="true" duration-ms="584" started-at="2019-07-17T18:19:07Z" finished-at="2019-07-17T18:19:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, java.lang.String, java.lang.String)[pri:0, instance:net.marklogic.testScripts.AdminTest@21507a04]" name="setUp" is-config="true" duration-ms="29851" started-at="2019-07-17T18:23:12Z" finished-at="2019-07-17T18:23:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void net.marklogic.testScripts.AdminTest.verifyAdminPage() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[http://admin:admin@localhost:8001/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[
+Initialize Browser - chrome ]]>
+            </line>
+            <line>
+              <![CDATA[
+Invoke target Environment - null ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="getTestData()[pri:0, instance:net.marklogic.testScripts.AdminTest@21507a04]" name="getTestData" is-config="true" duration-ms="3" started-at="2019-07-17T18:23:42Z" finished-at="2019-07-17T18:23:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTestData -->
+        <test-method status="PASS" signature="verifyAdminPage()[pri:0, instance:net.marklogic.testScripts.AdminTest@21507a04]" name="verifyAdminPage" duration-ms="12743" started-at="2019-07-17T18:23:42Z" description="Verify Admin Page" finished-at="2019-07-17T18:23:55Z">
+          <reporter-output>
+            <line>
+              <![CDATA[
+2: open the database created]]>
+            </line>
+            <line>
+              <![CDATA[
+3: Move to status page]]>
+            </line>
+            <line>
+              <![CDATA[
+4:check the count of the documents which are inserted on the status page.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyAdminPage -->
+        <test-method status="PASS" signature="afterMainMethod(org.testng.ITestResult)[pri:0, instance:net.marklogic.testScripts.AdminTest@21507a04]" name="afterMainMethod" is-config="true" duration-ms="2948" started-at="2019-07-17T18:23:55Z" finished-at="2019-07-17T18:23:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyAdminPage status=SUCCESS method=AdminTest.verifyAdminPage()[pri:0, instance:net.marklogic.testScripts.AdminTest@21507a04] output=
+2: open the database created]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMainMethod -->
+        <test-method status="PASS" signature="tearDownSuite()[pri:0, instance:net.marklogic.testScripts.AdminTest@21507a04]" name="tearDownSuite" is-config="true" duration-ms="745" started-at="2019-07-17T18:23:58Z" finished-at="2019-07-17T18:23:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownSuite -->
-      </class> <!-- net.marklogic.testScripts.QueryConsoleTest -->
-    </test> <!-- chrome QueryConsoleTest -->
+      </class> <!-- net.marklogic.testScripts.AdminTest -->
+    </test> <!-- chrome AdminTest -->
   </suite> <!-- Complete Suite -->
 </testng-results>

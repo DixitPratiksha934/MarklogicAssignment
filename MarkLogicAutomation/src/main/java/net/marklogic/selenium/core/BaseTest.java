@@ -62,16 +62,16 @@ import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 import net.marklogic.enums.DriverType;
+import net.marklogic.pages.AdminPage;
 import net.marklogic.pages.IndexPage;
 import net.marklogic.pages.QueryConsolePage;
 import net.marklogic.pages.ResultPage;
 import net.marklogic.pages.SearchResultPage;
 import net.marklogic.report.ScreenRecorder;
 import net.marklogic.utilities.ApplicationVerificationTitles;
-import net.marklogic.utilities.UserClaims;
 import net.marklogic.utilities.Utilities;
 
-public abstract class BaseTest extends ScreenRecorder implements UserClaims, ApplicationVerificationTitles {
+public abstract class BaseTest extends ScreenRecorder implements ApplicationVerificationTitles {
 
 	public static final Logger logger = LoggerFactory.getLogger(BaseTest.class);
 	private static final String BREAK_LINE = "\n";
@@ -84,11 +84,14 @@ public abstract class BaseTest extends ScreenRecorder implements UserClaims, App
 	protected ResultPage resultPage;
 	protected SearchResultPage searchPage;
 	protected QueryConsolePage qConsolePage;
+	protected AdminPage adminPage;
 
 
 	private static String setEnvironment, quitBrowser;
+	public static  String dataBaseName=generateRandomString(5);
+	public static String  forestName=generateRandomString(4);;
 
-	protected String browserType,color,searchTerm,searchFalseTerm,query1,query2;
+	protected String browserType,color,searchTerm,searchFalseTerm,query1,query2,documentCount;
 	protected static Properties RegressionTestData;
 	public static String resultPath;
 	public static Document document = null;
@@ -199,8 +202,7 @@ public abstract class BaseTest extends ScreenRecorder implements UserClaims, App
 		indexPage = PageFactory.initElements(getWebDriver(), IndexPage.class);
 		searchPage = PageFactory.initElements(getWebDriver(), SearchResultPage.class);
 		qConsolePage=PageFactory.initElements(getWebDriver(), QueryConsolePage.class);
-	
-
+		adminPage=PageFactory.initElements(getWebDriver(), AdminPage.class);
 		/**
 		 * Set property file
 		 */
@@ -448,6 +450,25 @@ public abstract class BaseTest extends ScreenRecorder implements UserClaims, App
 		return currentDate;
 	}
 
+	/**
+	 * Function: Get random string
+	 * 
+	 * @param lettersNum
+	 * @return
+	 */
+	public static String generateRandomString(int lettersNum) {
+		StringBuilder finalString = new StringBuilder();
+
+		int numberOfLetters = 25;
+		long randomNumber;
+		for (int i = 0; i < lettersNum; i++) {
+			char letter = 97;
+			randomNumber = Math.round(Math.random() * numberOfLetters);
+			letter += randomNumber;
+			finalString.append(String.valueOf(letter));
+		}
+		return finalString.toString();
+	}
 
 
 
