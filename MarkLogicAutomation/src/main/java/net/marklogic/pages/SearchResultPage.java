@@ -65,10 +65,12 @@ public class SearchResultPage extends BasePage {
 	}
 
 	/* Verify Searched Term is Highlighted */
-	public void verifySearchedTermIsHighlighted(String searchResultTerm, String highlightedColor) {
+	public void verifySearchedTermIsHighlighted(String searchResultTerm, String highlightedColor)
+	{
 		boolean flag = false;
 		for (WebElement searchTerm : resultList) {
 			if (getText(searchTerm).equals(searchResultTerm)) {
+				waitForElement(searchTerm);
 				String cssValue = searchTerm.getCssValue("background-color");
 				if (cssValue.equals(highlightedColor)) {
 					flag = true;

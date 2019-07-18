@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="AllMarkLogicScript Suite" verbose="2">
+<suite name="AllMarkLogicScript" verbose="2">
 
 	<listeners>
 		<listener class-name="net.marklogic.report.TestCaseTrackingListners" />
 	</listeners>
 
-	<test name="chrome IndexTest">
-		<parameter name="browser" value="chrome" />
+	<test name="IndexTest">
+		<parameter name="browser" value="${browser}" />
 		<parameter name="url"
 			value="http://admin:admin@localhost:8010/index.xqy" />
 		<classes>
@@ -15,8 +15,8 @@
 		</classes>
 	</test>
 
-	<test name="chrome SearchTextTest">
-		<parameter name="browser" value="chrome" />
+	<test name="SearchTextTest">
+		<parameter name="browser" value="${browser}" />
 		<parameter name="url"
 			value="http://admin:admin@localhost:8010/searchresult.xqy" />
 		<classes>
@@ -25,8 +25,8 @@
 	</test>
 
 
-	<test name="chrome QueryConsoleTest">
-		<parameter name="browser" value="chrome" />
+	<test name="QueryConsoleTest">
+		<parameter name="browser" value="${browser}" />
 		<parameter name="url"
 			value="http://admin:admin@localhost:8000/qconsole/" />
 		<classes>
@@ -34,8 +34,8 @@
 		</classes>
 	</test>
 
-	<test name="chrome AdminTest">
-		<parameter name="browser" value="chrome" />
+	<test name="AdminTest">
+		<parameter name="browser" value="${browser}" />
 		<parameter name="url" value="http://admin:admin@localhost:8001/"></parameter>
 		<classes>
 			<class name="net.marklogic.testScripts.AdminTest" />
