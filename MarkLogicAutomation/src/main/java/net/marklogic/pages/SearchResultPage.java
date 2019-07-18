@@ -2,6 +2,7 @@ package net.marklogic.pages;
 
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -52,6 +53,8 @@ public class SearchResultPage extends BasePage {
 
 	/* Verify Search Term present in displayed results */
 	public void verifySearchTermPresentInResults(String searchResultTerm) {
+	waitForPageLoaded();
+    
 		boolean flag = false;
 		for (WebElement searchTerm : resultList) {
 			waitForElement(searchTerm);

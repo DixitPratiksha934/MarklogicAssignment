@@ -7,7 +7,7 @@
 	</listeners>
 
 	<test name="IndexTest">
-		<parameter name="browser" value="${browser}" />
+		<parameter name="browser" value="chrome" />
 		<parameter name="url"
 			value="http://admin:admin@localhost:8010/index.xqy" />
 		<classes>
@@ -16,7 +16,7 @@
 	</test>
 
 	<test name="SearchTextTest">
-		<parameter name="browser" value="${browser}" />
+		<parameter name="browser" value="chrome" />
 		<parameter name="url"
 			value="http://admin:admin@localhost:8010/searchresult.xqy" />
 		<classes>
@@ -26,7 +26,7 @@
 
 
 	<test name="QueryConsoleTest">
-		<parameter name="browser" value="${browser}" />
+		<parameter name="browser" value="chrome" />
 		<parameter name="url"
 			value="http://admin:admin@localhost:8000/qconsole/" />
 		<classes>
@@ -35,7 +35,7 @@
 	</test>
 
 	<test name="AdminTest">
-		<parameter name="browser" value="${browser}" />
+		<parameter name="browser" value="chrome" />
 		<parameter name="url" value="http://admin:admin@localhost:8001/"></parameter>
 		<classes>
 			<class name="net.marklogic.testScripts.AdminTest" />

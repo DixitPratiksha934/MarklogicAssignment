@@ -1,1 +1,1 @@
-mvn clean test -DsuiteXmlFile=.\\AllMarkLogicScripts -Dmaven.test.failure.ignore=false -Dbrowser=chrome
+mvn clean test -DsuiteXmlFile=.\\AllMarkLogicScripts
