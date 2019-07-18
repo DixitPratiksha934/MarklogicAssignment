@@ -54,7 +54,6 @@ public class SearchResultPage extends BasePage {
 	/* Verify Search Term present in displayed results */
 	public void verifySearchTermPresentInResults(String searchResultTerm) {
 	waitForPageLoaded();
-    
 		boolean flag = false;
 		for (WebElement searchTerm : resultList) {
 			waitForElement(searchTerm);
