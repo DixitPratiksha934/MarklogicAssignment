@@ -58,7 +58,6 @@ public class SearchResultPage extends BasePage {
 			moveToElement(searchTerm);
 			if (getText(searchTerm).equals(searchResultTerm)) {
 				flag = true;
-				break;
 			}
 		}
 		Assert.assertTrue(flag);
@@ -73,7 +72,6 @@ public class SearchResultPage extends BasePage {
 				String cssValue = searchTerm.getCssValue("background-color");
 				if (cssValue.equals(highlightedColor)) {
 					flag = true;
-					break;
 				}
 			}
 		}
